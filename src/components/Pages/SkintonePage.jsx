@@ -1,18 +1,13 @@
-import React from 'react'
-import HeroSection3 from '../HeroSection3'
-import Footer from '../Footer'
-import '../../App.css';
+import React from "react";
+import HeroSection3 from "../HeroSection3";
+import "../../App.css";
 
 const SkintonePage = () => {
   return (
     <div>
-
-      <HeroSection3/>
-      <Footer/>
-      
+      <HeroSection3 />
     </div>
-  )
-}
+  );
+};
 
-export default SkintonePage
-
+export default SkintonePage;

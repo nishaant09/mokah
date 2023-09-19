@@ -1,0 +1,67 @@
+:root {
+  --primary: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .box-container {
+    display: grid; /* Use CSS Grid for a 2x2 grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    gap: 20px; /* Add gap between the boxes */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-right: 10px;
+  }
+
+  .box img {
+    width: auto; /* Reset width to auto */
+    height: 100px; /* Set a specific height for the images on mobile */
+    max-height: none; /* Remove max-height on mobile */
+  }
+  .box {
+    flex-basis: auto; /* Reset flex-basis for responsiveness */
+    margin: 0; /* Remove margin */
+  }
+}
+
+.btn-top-margin {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+  transition: 250ms;
+}

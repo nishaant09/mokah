@@ -1,5 +1,4 @@
-
-.hero-container {
+.section2-hero-container {
   background-color: #fff;
   height: 100vh;
   width: 100%;
@@ -12,31 +11,36 @@
   margin-top: -80px; /* Reduce the margin from the top */
   padding-top: 2px; /* Add padding from the top */
 }
-.hero-container > h1 {
-  color: #863F1C;
+.section2-hero-container > h1 {
+  color: #863f1c;
   font-size: 46px;
   margin-top: -40px;
-  margin-bottom:-20px
+  margin-bottom: -20px;
 }
 
 .box.selected {
   background-color: pink; /* Change the background color to pink for selected boxes */
-  border: 2px solid #863F1C; /* Add border for selected boxes */
+  border: 2px solid #863f1c; /* Add border for selected boxes */
 }
 
-.hero-container > p {
+.section2-hero-subheading {
   margin-top: 16px;
-  color: #863F1C;
+  color: #863f1c;
   font-size: 16px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.box-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-  flex-wrap: nowrap; /* Prevent boxes from wrapping to the next row */
+
+@media screen and (min-width: 900px) {
+  .box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    flex-wrap: nowrap; /* Prevent boxes from wrapping to the next row */
+  }
 }
 
 .box img {
@@ -46,8 +50,10 @@
 }
 
 .box {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  background-color: #00000;
+  background-color: "#00000";
   padding: 8px; /* Reduce the padding to make the boxes smaller */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -55,19 +61,6 @@
   height: 200px; /* Set a fixed height for all boxes */
   width: 200px; /* Set a fixed width for all boxes */
 }
-/* Add styles for button */
-button {
-  background-color: #863f1C;
-  color: white;
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-
 
 .box-button {
   margin-top: 10px;
@@ -86,47 +79,15 @@ button {
 
 /* Add this style to change the "continue" button */
 
-
 /* Add this style for hover effect on the button (optional) */
 button:hover {
-  background-color: #64220C; /* Change the hover background color */
+  background-color: #64220c; /* Change the hover background color */
 }
 
-
-
-
-  @media screen and (max-width: 768px) {
-  .hero-container > h1 {
+@media (max-width: 1200px) {
+  .section2-hero-container > h1 {
     font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-  }
-
-  .box-container {
-    display: grid; /* Use CSS Grid for a 2x2 grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-    gap: 20px; /* Add gap between the boxes */
-    margin-top: 20px; /* Adjust the top margin as needed */
-    margin-right:10px;
-  }
-   
-  .box img {
-    width: auto; /* Reset width to auto */
-    height: 100px; /* Set a specific height for the images on mobile */
-    max-height: none; /* Remove max-height on mobile */
-  }
-  .box {
-    flex-basis: auto; /* Reset flex-basis for responsiveness */
-    margin: 0; /* Remove margin */
-  }
-
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
-
-  .btn {
-    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

@@ -1,29 +1,32 @@
-import React from 'react';
+import React from "react";
 
-import { Button } from './Button';
-import './HeroSection.css';
-import { useNavigate } from 'react-router-dom';
+import { Button } from "./Button";
+import "./HeroSection.css";
+import { useNavigate } from "react-router-dom";
 
 function HeroSection() {
-
-
-
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleGetStartedClick = () => {
-    navigate('/skintype'); // Navigate to the Skin Type page
+    navigate("/skintype"); // Navigate to the Skin Type page
   };
 
   return (
-    <div className='hero-container' style={{ backgroundImage: 'url("/Images/Home.png")' }}>
-      <h1>Mokah Skincare Quiz</h1>
-      <p>Find your routine now!</p>
-      <div className='hero-btns'>
+    <div
+      className="hero-container main-hero-container"
+      style={{
+        backgroundImage: 'url("/Images/Home.png")',
+        backgroundSize: "cover",
+      }}
+    >
+      <h1 className="main-hero-heading">Mokah Skincare Quiz</h1>
+      <p className="main-hero-subheading">Find your routine now!</p>
+      <div className="main-hero-btns btn-top-margin">
         <Button
-          className='btns'
-      buttonStyle='btn--outline'
-      buttonSize='btn--large'
-      onClick={handleGetStartedClick}
+          className="btns"
+          buttonStyle="btn--outline"
+          buttonSize="btn--large"
+          onClick={handleGetStartedClick}
         >
           GET STARTED
         </Button>
@@ -31,6 +34,5 @@ function HeroSection() {
     </div>
   );
 }
-
 
 export default HeroSection;
