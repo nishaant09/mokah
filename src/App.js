@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './components/Navbar';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/Pages/HomePage';
+import Footer from './components/Footer';
+import SkintypePage from './components/Pages/SkintypePage';
+import SkintonePage from './components/Pages/SkintonePage'; // Import SkintonePage
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/skintype' element={<SkintypePage />} />
+        <Route path='/skintone' element={<SkintonePage />} /> {/* Add SkintonePage route */}
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
